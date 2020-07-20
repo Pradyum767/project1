@@ -244,7 +244,7 @@ nav ul li a:hover:before
 .flexcontainer
 {
 	display:block;
-    justify-content:space-around;
+    justify-content:center;
 
 }	
 .box
@@ -317,6 +317,12 @@ nav ul li a:hover:before
 	
 @media screen and (max-width:700px) 
 {
+	html, body {
+  overflow-x: hidden;
+}
+body {
+  position: relative
+}
 nav
 {
 	display:flex;
@@ -369,3 +375,9 @@ font-size:3vw;
 
 }
 
+@media screen and (max-width:544px)
+{
+	.welcome{font-size:8.2vw}
+	#content2 p{text-align:justify}
+	#3rd{margin-top:-1vw}
+}
