@@ -152,6 +152,12 @@ nav ul li a:hover:before
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.18);
   margin-bottom: 25px;
 }
+.slide .polaroid
+{
+  width: 100%;
+ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0), 0 6px 20px 0 rgba(0, 0, 0, 0);
+}
+
 .polaroid2
 {
   width: 30.5vw;
@@ -204,7 +210,8 @@ nav ul li a:hover:before
 {   width: 20%;
     text-align:center;
     padding:3vw;
- 
+   
+    
 }	
 
 .icon
@@ -230,34 +237,101 @@ nav ul li a:hover:before
   opacity: 1;
 }
 
-#contacts
-{
-	background-color:rgba(0,0,0,0.9);
-	color:white;
-	padding-left:20px;
-	
+
+.slidershow{
+	display:none;
+  width: 90vw;
+  height:150vw;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.18);
+  overflow: hidden;
 }
+.middle1{
+margin-left:50%;
+margin-top:80vw; 
+ transform: translate(-50%,-50%);
+}
+.navigation{
+  position: absolute;
+  bottom: 25vw;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+.bar{
+  width: 12vw;
+  height: 10px;
+  border: 1px solid #000;
+  margin: 6px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.bar:hover{
+  background: rgba(0,0,0,0.4);
+}
+
+input[name="r"]{
+    position: absolute;
+    visibility: hidden;
+}
+
+.slides{
+  width: 500%;
+  height: 86%;
+  display: flex;
+}
+
+.slide{
+  width: 20%;
+  transition: 0.6s;
+}
+.slide img{
+  width: 100%;
+  height: 100%;
+}
+
+#r1:checked ~ .s1{
+  margin-left: 0;
+}
+#r2:checked ~ .s1{
+  margin-left: -20%;
+}
+#r3:checked ~ .s1{
+  margin-left: -40%;
+}
+#r4:checked ~ .s1{
+  margin-left: -60%;
+}
+#r5:checked ~ .s1{
+  margin-left: -80%;
+}
+
+.partnr
+{
+	width:20vw;
+	height:17vw;
+}
+
 @media screen and (max-width:536px) 
 {
 
+#os
+{
+	display:none;
+}
+.slidershow{
+	display:block;
+}
 .flexcontainer
 {
 	display:block;
     justify-content:center;
-
+ 
 }	
 .box
 {   width: 90%;
     
 }	
 
-.polaroid
-{
-	margin:20px;
-  width: 80vw;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.18);
-  margin-bottom: 25px;
-}
 
 .cont{
   text-align: center;
@@ -361,6 +435,11 @@ nav
 }
 }
 
+		.aceiv
+		{
+	width:50%
+		}
+
 @media screen and (max-width:430px) 
 {
 	
@@ -376,7 +455,26 @@ font-size:3vw;
 
 @media screen and (max-width:544px)
 {
+	
+.partnr
+{
+	width:22vh;
+	height:22vh;
+}
 	.welcome{font-size:8.2vw}
 	#content2 p{text-align:justify}
 	#3rd{margin-top:-1vw}
+	i {
+		font-size:5.7vw;
+		
+		}
+		.aceiv
+		{
+			width:100%;
+			
+			
+		}
+		.aceiv1{
+		 font-size:5vw;
+		}
 }
