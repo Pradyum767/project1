@@ -400,6 +400,10 @@ input[name="r"]{
 	width:20vw;
 	height:17vw;
 }
+
+#contact{
+margin-top:8vw;
+}
 .contact_text{
 font-size:20px;
 color:#808080
@@ -576,6 +580,10 @@ font-size:3vw;
 
 @media screen and (max-width:544px)
 {
+	
+#contact{
+margin-top:-24vw;
+}
 	
 .partnr
 {
