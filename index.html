@@ -3,6 +3,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" type="text/css" href="designs.css">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital@1&display=swap" rel="stylesheet">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
 </head>
 <body style="overflow-x:hidden">
 <div id="container" style="margin:-5px">
@@ -14,14 +20,39 @@
 <div id="header">
 <ul >
 <li><a href="index.html">Home</a></li>
-<li><a href="index.html">About</a></li>
-<li><a href="index.html">Services</a></li>
-<li><a href="index.html">Projects</a></li>
-<li><a href="index.html">contact us</a></li>
+<li><a href="#content2">About</a></li>
+<li><a href="#specialization">Services</a></li>
+<li><a href="#project">Projects</a></li>
+<li><a href="#contact">contact us</a></li>
 
-<li><a href="index.html"><button type="button" class="btn" id="signup">Signup</button></a></li>
+<li><a href="#myForm"><button type="button" class="btn" onclick="openForm()" id="signup">Signin</button></a></li>
 
 </ul>
+<div class="form-popup" id="myForm">
+  <form action="/action_page.php" class="form-container">
+    <h1>Signin</h1>
+
+    <label for="email"><b>Email / User id</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    <button type="submit" class="btn">Login</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+
+<script>
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+</script>
+
 </div>
 
 </nav>
@@ -29,13 +60,13 @@
 <h1>Breathe a new <br>way of living<br><span style="font-family:Century Gothic; font-size:30%;font-weight:20">come discover the project that will<br> inspire a new way of living style</h1>
 </div>
 </div>
-<section id="content2">
-<h1 class="welcome">Welcome To Prakrika<br><span style="font-size:65%"> Where We Build Your Visions</h1>
+<section class="main" id="content2">
+<h1 class="welcome">Prakrika<br><span style="font-size:40%;font-weight:10px;text-shadow: 1px 1px 1px black;">We give your dreams a shape of reality</h1>
 <p style="font-size:160%;font-weight:60%;"><i>"Prakrika is an innovation and engineering firm that provides design, architecture, consulting, construction and R&D services to a wide range of clients.Prakrika operates primarily in high technology and innovation consultancy. We are committed to provide the latest technology and best service to our clients, because its not only about making new clients but its about retaining them."</i></p>
 </section>
 
 <div>
-<h1 style="margin-left:3%;margin-top:14vw;">Why Prakrika?</h1>
+<h1 style="margin-left:1%;margin-top:12vw;">Why Prakrika?</h1>
 <div class="flexcontainer" >
 
 <div class="box" >
@@ -55,45 +86,9 @@
 </div>
 </div>
 </div>
-<div style="background-color: #368fc240;text-align:center; padding:20px; margin-top:14vw;color:rgb(40, 110, 220);">
-<h1 class="aceiv1" >What we have Acheived ?</h1>
-<div class="flexcontainer" style="height:44vh; color:rgb(52, 142, 194);"  >
-<div class="aceiv" style="display:flex;justify-content:space-around;align-items:center;text-align:center">
-	<div><h1 style="font-size:7vh;">2018<br><span style="font-size:2vh;color:gray">Running Since</h1></div>
-	<div><h1 style="font-size:7vh">20K+<br><span style="font-size:2vh;color:gray">Community Strength</span></h1></div>
 
-</div>
-<div class="aceiv" style="display:flex;justify-content:space-around;align-items:center;text-align:center">
-
-<div><h1 style="font-size:7vh">20+<br><span style="font-size:2vh;color:gray">Monthly Projects</h1></div>
-<div><h1 style="font-size:7vh">100+<br><span style="font-size:2vh;color:gray">Clients Per Month</h1></div>
-
-</div>
-</div>
-</div>
-
-<div style="text-align:center; padding:20px; margin-top:14vw;">
-<h1 class="aceiv1" >Our Trusted Partners</h1>
-<div class="flexcontainer"  style="height:90vh;flex-direction:column;" >
-<div  class="partner-" style="display:flex;justify-content:space-around;">
-	<img src="l2.png" class="partnr"></img>
-	<img src="l3.jpg" class="partnr"></img>
-</div>
-<div  class="partner-" style="display:flex;justify-content:space-around;">
-	<img src="l5.jpg" class="partnr"></img>
-	<img src="l7.jpg" class="partnr"></img>
-</div>
-<div  class="partner-" style="display:flex;justify-content:space-around;">	
-	<img src="l8.jpg" class="partnr"></img>
-	<img src="l9.png" class="partnr"></img>
-</div>	
-</div>
-</div>
-</div>
-
-
-<h1 style=" margin-left:1%;margin-top:14vw;margin-bottom:5vw">Our Specialization</h1>
-
+<div id="specialization" >
+<h1 class="aceiv1" style=" margin-left:1%;margin-top:10vw;margin-bottom:3.5vw">Our Specialization</h1>
 <div class="flexcontainer" id="os">
 <div class="box1">
 <div class="polaroid">
@@ -141,6 +136,8 @@
 <div class="slidershow middle1">
 
       <div class="slides">
+	  <input type="radio" name="r" id="prev" >
+	  <input type="radio" name="r" id="next" >
         <input type="radio" name="r" id="r1" checked>
         <input type="radio" name="r" id="r2">
         <input type="radio" name="r" id="r3">
@@ -178,17 +175,19 @@
       </div>
 
       <div class="navigation">
+	   <label><i class="arrow left"></i></label>
         <label for="r1" class="bar"></label>
         <label for="r2" class="bar"></label>
         <label for="r3" class="bar"></label>
         <label for="r4" class="bar"></label>
         <label for="r5" class="bar"></label>
+		<label><i class="arrow right"></i></label>
       </div>
     </div>
-
-
-<h1 style="margin-left:3%;margin-top:14vw">Our Recent Projects<br><br></h1>
-<div class="flexcontainer" id="prokect">
+</div>
+<div id="project">
+<h1 class="aceiv1" style="margin-left:1%;margin-top:12vw;margin-bottom:3.5vw">Our Recent Projects</h1>
+<div class="flexcontainer" >
 <div class="polaroid2">
 <img src="p5.jpg" class="box2" ></div>
 <div class="polaroid2">
@@ -197,21 +196,58 @@
 <img src="p6.jpg"  class="box2" ></div>
 
 </div>
-<div style="background:  linear-gradient(rgba(0,0,0,0.5),rgba(255,255,255,0.5));margin-top:12vw;">
-<div class="flexcontainer" style="height:40vh;flex-direction:row">
-<div><h1 style="font-size:3.6vh;border-bottom:2px solid black;border-radius:3px;border-color: #404040">contacts</h1>
- <h1 style="font-size:2.4vh;color:#595959">Goregaon west,andheri,Mumbal,768123<br>
- <br>+9i9834521232<br>
-<br>xyzqss@gmail.com</h1>
+</div>
+<div style="background-color: #368fc240;text-align:center; padding:20px; margin-top:10vw;color:rgb(40, 110, 220);">
+<h1 class="aceiv1" >What we have Acheived ?</h1>
+<div class="flexcontainer" style="height:44vh; color:rgb(52, 142, 194);"  >
+<div class="aceiv" style="display:flex;justify-content:space-around;align-items:center;text-align:center">
+	<div><h1 style="font-size:7vh;">2018<br><span style="font-size:2vh;color:gray">Running Since</h1></div>
+	<div><h1 style="font-size:7vh">20K+<br><span style="font-size:2vh;color:gray">Community Strength</span></h1></div>
+
+</div>
+<div class="aceiv" style="display:flex;justify-content:space-around;align-items:center;text-align:center">
+
+<div><h1 style="font-size:7vh">20+<br><span style="font-size:2vh;color:gray">Monthly Projects</h1></div>
+<div><h1 style="font-size:7vh">100+<br><span style="font-size:2vh;color:gray">Clients Per Month</h1></div>
+
+</div>
+</div>
+</div>
+
+<div style="text-align:center; padding:20px; margin-top:10vw;">
+<h1 class="aceiv1" >Our Trusted Partners</h1>
+<div class="flexcontainer"  style="height:90vh;flex-direction:column;" >
+<div  class="partner-" style="display:flex;justify-content:space-around;">
+	<img src="l2.png" class="partnr"></img>
+	<img src="l3.jpg" class="partnr"></img>
+</div>
+<div  class="partner-" style="display:flex;justify-content:space-around;">
+	<img src="l5.jpg" class="partnr"></img>
+	<img src="l7.jpg" class="partnr"></img>
+</div>
+<div  class="partner-" style="display:flex;justify-content:space-around;">	
+	<img src="l8.jpg" class="partnr"></img>
+	<img src="l9.png" class="partnr"></img>
+</div>	
+</div>
+</div>
+</div>
+
+<div id="contact"style="background-color:#1f1f1f;border-top:rgba(255,255,255,0.2);margin-top:12vw;color:white">
+<div class="flexcontainer" style="height:cover;padding-bottom:40px;padding-left:20px;box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.18);">
+<div><h1 style="margin-top:3vw;margin-bottom:1.5vw">contacts</h1>
+ <h1 class="contact_text"><a>Goregaon west,andheri,Mumbal,768123</a><br>
+ <br><a>+919834521232</a><br>
+<br><a href="#contacts">xyzqss@gmail.com</a></h1>
 </div>
 <div>
-<h1 style="font-size:3.6vh;border-bottom:2px solid black;border-radius:3px;border-color: #404040">Social</h1>
-<h1 style="font-size:2.4vh;color:#595959">Facebook page<br><br>Instagram page<br><br>Linked in</h1> 
+<h1 style="margin-top:3vw;margin-bottom:1.5vw">Social</h1>
+<h1 class="contact_text"><a href="#contacts">Facebook page</a><br><br><a href="#contacts">Instagram page</a><br><br><a href="#contacts">Linked in</a></h1> 
 </div>
 <div>
-<h1 style="font-size:3.6vh;border-bottom:2px solid black;border-radius:3px;border-color: #404040">Help</h1>
-<h1 style="font-size:2.4vh;color:#595959">
- FAQ<br><br>Terms of Service<br><br>Privacy policy</h1>
+<h1 style="margin-top:3vw;margin-bottom:1.5vw">Help</h1>
+<h1 class="contact_text">
+<a href="#contacts">FAQ</a><br><br><a href="#contacts">Terms of Service</a><br><br><a href="#">Privacy policy</a></h1>
 </div>
 </div>
 </div>
