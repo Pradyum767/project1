@@ -402,7 +402,7 @@ input[name="r"]{
 }
 
 #contact{
-margin-top:12vw;
+margin-top:8vw;
 }
 .contact_text{
 font-size:20px;
@@ -581,14 +581,13 @@ font-size:3vw;
 @media screen and (max-width:544px)
 {
 	
-#contact{
-margin-top:-24vw;
-}
-	
 .partnr
 {
 	width:22vh;
 	height:22vh;
+}
+#contact{
+margin-top:-24vw;
 }
 	.welcome{font-size:12vw}
 	#content2 p{text-align:justify}
