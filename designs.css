@@ -1,3 +1,7 @@
+
+html {
+  scroll-behavior: smooth;
+}
 #container
 {
 	background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(p6.jpg);
@@ -10,7 +14,7 @@
 	
 	-webkit-animation: backgroundScroll 15s linear 1;
     -webkit-animation-fill-mode:forward;
-    animation: backgroundScroll 15s linear 1;
+    animation: backgroundScroll 40s linear 1;
 	animation-iteration-count: infinite;
 	
     animation-fill-mode:forward;
@@ -47,7 +51,7 @@ nav
 }
 h1
 {
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Lato', sans-serif;
 }
 
 ul
@@ -63,14 +67,22 @@ li
 	display:inline-block;
 	
 }
-nav div ul li a
+#contact a
+{color:#808080;
+}
+#contact a:before
+{
+	background:red;
+	height:1px;
+}
+a
 {
 	position:relative; 
 	text-decoration:none;
 	color:white;
 	transition:0.5s
 }
-nav div ul li a:before
+a:before
 {
 position:absolute;
 content:'';
@@ -86,7 +98,7 @@ transition:transform .4s linear;
 
 }
 	
-nav ul li a:hover:before
+ a:hover:before
 {
 	transform:scaleX(1);
 	transform-origin:left;
@@ -99,10 +111,67 @@ nav ul li a:hover:before
  	border-radius: 10px;
 	border-color:transparent;
 }
+
+/* The popup form - hidden by default */
+.form-popup {
+  display:none;
+  position: fixed;
+  top:120px;
+  right: 15px;
+  border: 2px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  width:22vw;
+  max-width: 320px;
+  padding:10px;
+  background-color: rgb(20, 20, 20,0.7);
+}
+
+/* Full-width input fields */
+.form-container input[type=text], .form-container input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.7;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+  opacity: 0.6;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+
 #text
 {    
   
-    margin-top:250px;
+    margin-top:200px;
 	text-align:center;
 	color:white;
 	font-size:2.5vw
@@ -123,7 +192,7 @@ nav ul li a:hover:before
 } 
 .welcome
 {
-	font-size:35pt;
+	font-size:45pt;
 	color:rgb(0,0,0,0.9);
     text-shadow: 2px 2px 3px black;
 }
@@ -198,7 +267,6 @@ nav ul li a:hover:before
    margin:5px 10px 5px 10px;
    width:29vw;
    height:25vw;
-   height:auto;
 }
 
 #boxes
@@ -252,22 +320,44 @@ margin-top:80vw;
 }
 .navigation{
   position: absolute;
-  bottom: 25vw;
-  left: 50%;
+  bottom: 1.5vw;
+  left:50%;
   transform: translateX(-50%);
   display: flex;
 }
 .bar{
-  width: 12vw;
+  width: 11vw;
   height: 10px;
   border: 1px solid #000;
   margin: 6px;
   cursor: pointer;
   transition: 0.4s;
 }
+.arrow {
+  border:solid black;
+  opacity:0.4;
+  border-width: 0 5px 5px 0;
+  display: inline-block;
+  padding: 7px;
+
+}
+
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
 .bar:hover{
   background: rgba(0,0,0,0.4);
 }
+.arrow:hover{
+  opacity:0.7;
+}
+
 
 input[name="r"]{
     position: absolute;
@@ -276,7 +366,7 @@ input[name="r"]{
 
 .slides{
   width: 500%;
-  height: 86%;
+  height: 84%;
   display: flex;
 }
 
@@ -310,9 +400,32 @@ input[name="r"]{
 	width:20vw;
 	height:17vw;
 }
+.contact_text{
+font-size:20px;
+color:#808080
+}
+@media screen and (max-width:1000px) 
+{
+  	.form-popup {
+  position: fixed;
+  top:120px;
+  left:15vw;
+  right:15vw;
+  border: 2px solid #f1f1f1;
+  z-index: 9;
+}
+.form-container {
+	width:65vw;
+  max-width: 65vw;
+}
 
+}	
 @media screen and (max-width:536px) 
 {
+	
+.contact_text a{
+font-size:4vw;
+}
 
 #os
 {
@@ -321,6 +434,11 @@ input[name="r"]{
 .slidershow{
 	display:block;
 }
+#specialization
+{
+	margin-bottom:-55%;
+}
+
 .flexcontainer
 {
 	display:block;
@@ -376,6 +494,9 @@ input[name="r"]{
 		margin-left:2px;
 	}
 	
+.contact_text{
+font-size:2.5vw;
+}
 }	
 	
 @media screen and (max-width:514px) 
@@ -425,7 +546,7 @@ nav
     
 
    width:90vw;
-   height:80vw;
+   height:100vw;
    height:auto;
 }
 .polaroid2
@@ -461,11 +582,12 @@ font-size:3vw;
 	width:22vh;
 	height:22vh;
 }
-	.welcome{font-size:8.2vw}
+	.welcome{font-size:12vw}
 	#content2 p{text-align:justify}
 	#3rd{margin-top:-1vw}
 	i {
-		font-size:5.7vw;
+		font-family: 'Crimson Text', serif;
+		font-size:5.3vw;
 		
 		}
 		.aceiv
@@ -475,6 +597,6 @@ font-size:3vw;
 			
 		}
 		.aceiv1{
-		 font-size:5vw;
+		 font-size:7vw;
 		}
 }
